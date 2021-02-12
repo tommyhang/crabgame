@@ -1,0 +1,104 @@
+.game-piece {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: double 5px #caa56c;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0.5rem;
+}
+
+.board-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-content: center;
+    background: #f5cac3;
+    border-radius: 15px;
+    width: 100%;
+    height: 500px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "players-container roll roll-button"
+      ". game-board game-board";
+  }
+  .game-board {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    background: #f5cac3;
+    grid-template-areas:
+      "deer gourd rooster"
+      "fish crab shrimp";
+    grid-area: game-board;
+    height: auto; width: auto;
+  }
+  
+  .deer { grid-area: deer; }
+  
+  .gourd { grid-area: gourd;}
+  
+  .rooster { grid-area: rooster; }
+  
+  .fish { grid-area: fish; }
+  
+  .crab { grid-area: crab; }
+  
+  .shrimp { grid-area: shrimp;}
+  
+  .players-container { grid-area: players-container; }
+  
+  .roll-button { grid-area: roll-button; 
+    height: 70px;}
+  
+  .roll {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      "dice1 dice2 dice3";
+    grid-area: roll;
+    height: auto; width: auto;
+  }
+  
+.dice1 { grid-area: dice1; 
+    border: double 5px #caa56c;
+    background-color:rgb(255, 255, 255);
+    border-radius: 10%;
+    width: 70px;
+    height: 70px;
+    margin: 0.5rem;
+    }
+  
+  .dice2 { grid-area: dice2; 
+    border: double 5px #caa56c;
+    background-color:rgb(255, 255, 255);
+    border-radius: 10%;
+    width: 70px;
+    height: 70px;
+    margin: 0.5rem;
+}
+  
+  .dice3 { grid-area: dice3; 
+    border: double 5px #caa56c;
+    background-color:rgb(255, 255, 255);
+    border-radius: 10%;
+    width: 70px;
+    height: 70px;
+    margin: 0.5rem;
+}
+
+
+  
