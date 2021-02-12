@@ -72,12 +72,11 @@ function getInitialData() {
             data["dice2"]=rows[1].board_piece;
             data["dice3"]=rows[2].board_piece;
             // console.log("sending out initial: ",data)
-            io.sockets.emit('getInitialData',data); 
         });
     });
 
 
-    // setTimeout(() => { io.sockets.emit('getInitialData',data); }, 1000);
+    setTimeout(() => { io.sockets.emit('getInitialData',data); }, 1000);
     
 
     
